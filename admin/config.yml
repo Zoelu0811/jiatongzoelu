@@ -1,0 +1,139 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded media goes in the repo
+media_folder: "images"
+public_folder: "/images"
+
+# Show editor preview off by default (we'll just edit + view live site)
+show_preview_links: true
+
+collections:
+  # ---------- Site-wide settings ----------
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - file: "src/_data/site.json"
+        label: "Site info, contact, menu"
+        name: "site"
+        fields:
+          - { name: name, label: "Name (English)", widget: string }
+          - { name: name_zh, label: "Name (Chinese)", widget: string }
+          - { name: email, label: "Email", widget: string }
+          - { name: instagram, label: "Instagram URL", widget: string }
+          - { name: homepage_cover, label: "Homepage cover image", widget: image }
+          - name: menu
+            label: "Menu items (homepage)"
+            widget: list
+            fields:
+              - { name: label, label: "Label", widget: string }
+              - { name: url, label: "URL (e.g. /project/)", widget: string }
+
+  # ---------- Projects ----------
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "src/projects"
+    create: true
+    delete: true
+    extension: "md"
+    format: "yaml-frontmatter"
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: ["order", "title"]
+    fields:
+      - { name: title, label: "Title", widget: string }
+      - { name: year, label: "Year (optional, e.g. '2022 — Ongoing')", widget: string, required: false }
+      - { name: order, label: "Display order (lower = earlier)", widget: number, default: 99 }
+      - { name: cover, label: "Cover image (used on Project list page)", widget: image }
+      - name: layout
+        label: "Layout type"
+        widget: select
+        default: "project-slideshow.njk"
+        options:
+          - { label: "Slideshow — single image at a time, click to advance", value: "project-slideshow.njk" }
+          - { label: "Scrolling — horizontal photo flow with text panel at end", value: "project-scrollytelling.njk" }
+      - name: slides
+        label: "Images (for SLIDESHOW layout — leave empty if using scrolling)"
+        widget: list
+        field: { name: image, label: Image, widget: image }
+        required: false
+      - name: images
+        label: "Images (for SCROLLING layout — leave empty if using slideshow)"
+        widget: list
+        field: { name: image, label: Image, widget: image }
+        required: false
+      - { name: body, label: "Statement (optional)", widget: markdown, required: false }
+
+  # ---------- Editorial ----------
+  - name: "editorial"
+    label: "Editorial"
+    label_singular: "Editorial assignment"
+    folder: "src/editorial"
+    create: true
+    delete: true
+    extension: "md"
+    format: "yaml-frontmatter"
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: ["order", "title"]
+    fields:
+      - { name: title, label: "Internal title (becomes URL)", widget: string }
+      - { name: order, label: "Display order on Editorial grid", widget: number, default: 99 }
+      - { name: cover, label: "Cover thumbnail (4:5 ratio looks best)", widget: image }
+      - { name: label, label: "Label shown under thumbnail (e.g. 'Time Magazine — Lyme')", widget: string }
+      - name: groups
+        label: "Subject groups (each with title + photos)"
+        label_singular: "Group"
+        widget: list
+        summary: "{{fields.title}}"
+        fields:
+          - { name: title, label: "Group title", widget: string }
+          - { name: description, label: "Description (optional)", widget: text, required: false }
+          - name: images
+            label: "Photos (first one = group cover)"
+            widget: list
+            field: { name: image, label: Image, widget: image }
+
+  # ---------- Exhibition & Publication ----------
+  - name: "exhibition"
+    label: "Exhibition & Publication"
+    files:
+      - file: "src/_data/exhibition.json"
+        label: "Exhibition / publication entries"
+        name: "exhibition"
+        fields:
+          - name: entries
+            label: "Entries"
+            label_singular: "Entry"
+            widget: list
+            summary: "{{fields.caption_html}}"
+            fields:
+              - { name: caption_html, label: "Caption (HTML allowed — use <em></em> for italics, <a href=…></a> for links)", widget: text }
+              - name: images
+                label: "Photos"
+                widget: list
+                field: { name: image, label: Image, widget: image }
+
+  # ---------- About ----------
+  - name: "about"
+    label: "About"
+    files:
+      - file: "src/about.njk"
+        label: "About page"
+        name: "about"
+        fields:
+          - { name: bio, label: "Bio (separate paragraphs with a blank line)", widget: text }
+          - name: education
+            label: "Education"
+            widget: list
+            fields:
+              - { name: year, label: "Year", widget: string }
+              - { name: detail, label: "Detail", widget: string }
+          - name: awards
+            label: "Selected Awards"
+            widget: list
+            fields:
+              - { name: year, label: "Year", widget: string }
+              - { name: detail, label: "Detail", widget: string }

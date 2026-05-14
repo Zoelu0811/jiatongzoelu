@@ -1,0 +1,76 @@
+---
+layout: layout.njk
+permalink: /about/
+title: About
+fullScreen: false
+hideFooter: false
+bio: |
+  Jiatong Lu (b. 1988) is a contemporary photographer and visual artist based in New York.
+  Her practice explores memory, identity, and the spaces between presence and absence
+  through documentary and constructed image-making.
+
+  Her work has been exhibited at the Center for Photography at Woodstock and the
+  13th Three Shadows Photography Award in Beijing, and featured in TIME Magazine
+  and LensCulture.
+education:
+  - year: "2022"
+    detail: "MFA, School of Visual Arts, New York"
+  - year: "2018"
+    detail: "BFA, [your undergraduate school]"
+awards:
+  - year: "2023"
+    detail: "13th Three Shadows Photography Award, Shortlist"
+  - year: "2022"
+    detail: "[Award name]"
+pageStyles: |
+  .about {
+    max-width: 640px;
+    margin: 64px auto;
+    padding: 0 var(--pad);
+    flex: 1;
+  }
+  .about h2 { font-size: 14px; font-weight: 700; line-height: 1.9; margin-top: 32px; margin-bottom: 4px; }
+  .about h2:first-child { margin-top: 0; }
+  .about p { margin-bottom: 16px; }
+  .about ul { list-style: none; padding: 0; }
+  .about li { display: grid; grid-template-columns: 80px 1fr; gap: 16px; padding: 2px 0; }
+  .about li .year { color: var(--fg-dim); }
+  body { font-size: 14px; line-height: 1.9; }
+  .logo, .header-meta { font-size: 14px; line-height: 1.9; }
+  @media (max-width: 640px) {
+    .about { margin: 32px 0; padding: 0; max-width: 100%; }
+    .about h2 { font-size: 12px; line-height: 1.6; margin-top: 24px; }
+    .about li { grid-template-columns: 60px 1fr; gap: 12px; }
+    body { font-size: 12px; line-height: 1.6; }
+    .logo, .header-meta { font-size: 12px; line-height: 1.6; }
+    .footer { margin-top: 32px; }
+  }
+---
+<main class="about">
+
+  <h2>Bio</h2>
+  {% for paragraph in bio.split('\n\n') %}
+  <p>{{ paragraph | trim }}</p>
+  {% endfor %}
+
+  <h2>Education</h2>
+  <ul>
+    {% for item in education %}
+    <li><span class="year">{{ item.year }}</span><span>{{ item.detail }}</span></li>
+    {% endfor %}
+  </ul>
+
+  <h2>Selected Awards</h2>
+  <ul>
+    {% for item in awards %}
+    <li><span class="year">{{ item.year }}</span><span>{{ item.detail }}</span></li>
+    {% endfor %}
+  </ul>
+
+  <h2>Contact</h2>
+  <p>
+    <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+    <a href="{{ site.instagram }}" target="_blank" rel="noopener">@jiatonglu_</a>
+  </p>
+
+</main>

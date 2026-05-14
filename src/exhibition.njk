@@ -1,0 +1,106 @@
+---
+layout: layout.njk
+permalink: /exhibition/
+title: Exhibition & Publication
+fullScreen: true
+hideFooter: true
+pageStyles: |
+  .gallery {
+    flex: 1;
+    display: flex; flex-direction: row;
+    align-items: center;
+    overflow-x: auto; overflow-y: hidden;
+    gap: 36px;
+    padding: var(--pad) 0;
+    scroll-behavior: smooth;
+  }
+  .gallery::-webkit-scrollbar { height: 6px; }
+  .gallery::-webkit-scrollbar-track { background: transparent; }
+  .gallery::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
+  .group {
+    flex-shrink: 0;
+    display: flex; flex-direction: column; align-items: flex-start;
+    gap: 12px;
+    height: calc(52vh + 100px);
+  }
+  .stage { position: relative; height: 52vh; cursor: pointer; }
+  .group:not(.multi) .stage { cursor: default; }
+  .stage img {
+    display: block; height: 100%;
+    width: auto; max-width: none;
+    object-fit: contain;
+  }
+  .counter {
+    font-size: 11px; color: var(--fg-dim);
+    letter-spacing: 0.05em;
+    min-height: 18px;
+  }
+  .group:not(.multi) .counter { visibility: hidden; }
+  .caption {
+    width: 100%; max-width: 360px;
+    font-size: 11px; line-height: 1.6; color: var(--fg);
+  }
+  .caption em { font-style: italic; }
+  .caption a { color: var(--fg); text-decoration: underline; text-underline-offset: 2px; }
+  .caption a:hover { opacity: 0.5; }
+  .scroll-hint {
+    position: fixed;
+    bottom: var(--pad); right: var(--pad);
+    font-size: 11px; color: var(--fg-dim);
+    letter-spacing: 0.05em;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  @media (max-width: 640px) {
+    .gallery {
+      flex-direction: column; align-items: stretch;
+      overflow: visible; padding: 24px 0; gap: 32px;
+    }
+    .group {
+      height: auto; width: 100%;
+      flex-direction: column-reverse;
+    }
+    .stage { height: auto; }
+    .stage img { height: auto; width: 100%; max-width: 100%; }
+    .caption { max-width: 100%; }
+    .scroll-hint { display: none; }
+  }
+pageScripts: |
+  document.querySelectorAll('.group').forEach(group => {
+    const imgs = JSON.parse(group.dataset.images);
+    if (imgs.length > 1) group.classList.add('multi');
+    const stage = group.querySelector('.stage');
+    const imgEl = stage.querySelector('img');
+    const cur = group.querySelector('.cur');
+    let i = 0;
+    function show(idx) { i = (idx + imgs.length) % imgs.length; imgEl.src = imgs[i]; cur.textContent = i + 1; }
+    if (imgs.length > 1) stage.addEventListener('click', () => show(i + 1));
+  });
+  const gallery = document.querySelector('.gallery');
+  const hint = document.querySelector('.scroll-hint');
+  if (window.matchMedia('(min-width: 641px)').matches) {
+    gallery.addEventListener('wheel', (e) => {
+      if (e.deltaY === 0) return;
+      e.preventDefault();
+      gallery.scrollBy({ left: e.deltaY * 1.5, behavior: 'auto' });
+    }, { passive: false });
+    let hidden = false;
+    gallery.addEventListener('scroll', () => {
+      if (hidden) return;
+      if (gallery.scrollLeft > 80) { hint.style.opacity = '0'; hidden = true; }
+    });
+  }
+---
+<main class="gallery">
+
+  {% for entry in exhibition.entries %}
+  <article class="group" data-images='{{ entry.images | jsonStringify | safe }}'>
+    <div class="stage"><img src="{{ entry.images[0] }}" alt=""></div>
+    <div class="counter"><span class="cur">1</span> / <span class="tot">{{ entry.images.length }}</span></div>
+    <div class="caption">{{ entry.caption_html | safe }}</div>
+  </article>
+  {% endfor %}
+
+</main>
+
+<div class="scroll-hint">Scroll →</div>

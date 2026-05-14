@@ -1,0 +1,12 @@
+[build]
+  publish = "_site"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Netlify Identity + Git Gateway redirect for Decap CMS
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200

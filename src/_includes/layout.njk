@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if title %}{{ title }} — {% endif %}{{ site.name }} {{ site.name_zh }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --fg: #000; --fg-dim: #999; --bg: #fff; --line: #e5e5e5; --pad: clamp(20px, 3vw, 40px); }
+  html, body { height: 100%; }
+  body {
+    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+    color: var(--fg); background: var(--bg);
+    font-size: 12px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    {% if fullScreen %}overflow: hidden;{% endif %}
+  }
+  a { color: inherit; text-decoration: none; }
+  a:hover { opacity: 0.5; }
+  .site {
+    {% if fullScreen %}height: 100vh;{% else %}min-height: 100vh;{% endif %}
+    display: flex; flex-direction: column;
+    padding: var(--pad);
+  }
+  .header { display: flex; justify-content: space-between; align-items: baseline; }
+  .logo, .header-meta { font-size: 14px; line-height: 1.9; }
+  .header-meta { color: var(--fg); }
+  .footer {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px; line-height: 1.9; color: var(--fg-dim);
+    margin-top: 32px;
+  }
+  .footer a:hover { color: var(--fg); opacity: 1; }
+  @media (max-width: 640px) {
+    :root { --pad: 18px; }
+    body { font-size: 12px; line-height: 1.6; {% if fullScreen %}overflow: auto;{% endif %} }
+    .logo, .header-meta { font-size: 12px; line-height: 1.6; }
+    .site { {% if fullScreen %}height: auto; min-height: 100vh;{% endif %} }
+    .footer {
+      flex-direction: column; justify-content: flex-start;
+      gap: 4px; align-items: flex-start;
+      font-size: 11px; line-height: 1.6;
+      margin-top: 32px;
+    }
+  }
+  {% if pageStyles %}{{ pageStyles | safe }}{% endif %}
+</style>
+</head>
+<body>
+<div class="site">
+
+  <header class="header">
+    <a href="/" class="logo">{{ site.name }}&nbsp;&nbsp;{{ site.name_zh }}</a>
+    <a href="/about/" class="header-meta">About</a>
+  </header>
+
+  {{ content | safe }}
+
+  {% if hideFooter !== true %}
+  <footer class="footer">
+    <div>
+      <a href="mailto:{{ site.email }}">Email</a>
+      &nbsp;·&nbsp;
+      <a href="{{ site.instagram }}" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
+  {% endif %}
+
+</div>
+{% if pageScripts %}<script>{{ pageScripts | safe }}</script>{% endif %}
+</body>
+</html>

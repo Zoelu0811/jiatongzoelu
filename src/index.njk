@@ -1,0 +1,63 @@
+---
+layout: layout.njk
+permalink: /
+fullScreen: true
+hideFooter: false
+pageStyles: |
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 88px;
+    padding: var(--pad) 0;
+    flex: 1;
+  }
+  .menu {
+    list-style: none;
+    display: flex; flex-direction: column;
+    gap: 6px; text-align: left;
+  }
+  .menu a {
+    font-size: 14px; line-height: 1.9;
+    transition: opacity 0.25s ease;
+  }
+  .menu:hover a { opacity: 0.35; }
+  .menu a:hover { opacity: 1; }
+  .cover {
+    width: 360px; max-width: 100%;
+    aspect-ratio: 4 / 5;
+    background: #ececec;
+    overflow: hidden; flex-shrink: 0;
+  }
+  .cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  body { font-size: 14px; line-height: 1.9; }
+  .logo, .header-meta { font-size: 14px; line-height: 1.9; }
+
+  @media (max-width: 640px) {
+    .site { min-height: 0; display: block; }
+    .main {
+      display: block;
+      padding: 0;
+      margin-top: 20px;
+    }
+    .menu { text-align: left; gap: 2px; }
+    .menu a { font-size: 12px; line-height: 1.6; }
+    .cover { width: 75vw; margin: 20px auto 0; }
+    body { font-size: 12px; line-height: 1.6; }
+    .logo, .header-meta { font-size: 12px; line-height: 1.6; }
+    .footer { margin-top: 20px; }
+  }
+---
+<main class="main">
+
+  <ul class="menu">
+    {% for item in site.menu %}
+    <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <div class="cover">
+    <img src="{{ site.homepage_cover }}" alt="">
+  </div>
+
+</main>

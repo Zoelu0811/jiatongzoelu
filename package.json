@@ -1,0 +1,13 @@
+{
+  "name": "jiatongzoelu",
+  "version": "1.0.0",
+  "description": "Jiatong Lu — photographer portfolio",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

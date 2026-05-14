@@ -1,0 +1,107 @@
+---
+layout: layout.njk
+fullScreen: false
+hideFooter: false
+pageStyles: |
+  .project-body {
+    flex: 1;
+    display: flex; flex-direction: column;
+    align-items: center;
+    margin-top: 48px; width: 100%;
+  }
+  .project-title {
+    font-size: 14px; font-weight: 700; line-height: 1.9;
+    margin-bottom: 32px;
+  }
+  .slideshow {
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px;
+    margin-bottom: 14px;
+    user-select: none;
+  }
+  .slide-arrow {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 28px; line-height: 1;
+    color: var(--fg);
+    background: none; border: none;
+    cursor: pointer;
+    padding: 8px 4px;
+    opacity: 0.4;
+    transition: opacity 0.2s ease;
+  }
+  .slide-arrow:hover { opacity: 1; }
+  .slide-stage { position: relative; cursor: pointer; }
+  .slide-stage img {
+    display: block;
+    max-height: 70vh; max-width: 70vw;
+    width: auto; height: auto;
+  }
+  .slide-counter {
+    text-align: center;
+    font-size: 11px; color: var(--fg-dim);
+    letter-spacing: 0.05em;
+    margin-bottom: 56px;
+  }
+  .statement {
+    max-width: 700px;
+    font-size: 12px; line-height: 1.9;
+    margin-bottom: 64px;
+  }
+  .statement p { margin-bottom: 14px; }
+  @media (max-width: 640px) {
+    .project-body { margin-top: 24px; }
+    .project-title { font-size: 13px; margin-bottom: 24px; }
+    .slide-arrow { font-size: 22px; padding: 6px 2px; }
+    .slide-stage img { max-height: 60vh; max-width: 78vw; }
+    .slide-counter { margin-bottom: 40px; }
+    .statement { font-size: 12px; margin-bottom: 40px; max-width: 100%; }
+  }
+pageScripts: |
+  const slides = JSON.parse(document.getElementById('slides-data').textContent);
+  const img = document.getElementById('slide-img');
+  const cur = document.getElementById('cur');
+  const total = document.getElementById('total');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  const stage = document.getElementById('stage');
+  let i = 0;
+  total.textContent = slides.length;
+  function show(idx) {
+    i = (idx + slides.length) % slides.length;
+    img.src = slides[i];
+    cur.textContent = i + 1;
+  }
+  prev.addEventListener('click', () => show(i - 1));
+  next.addEventListener('click', () => show(i + 1));
+  stage.addEventListener('click', () => show(i + 1));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') show(i - 1);
+    if (e.key === 'ArrowRight') show(i + 1);
+  });
+  function preload() {
+    const nx = new Image();
+    nx.src = slides[(i + 1) % slides.length];
+  }
+  img.addEventListener('load', preload);
+---
+<main class="project-body">
+
+  <h1 class="project-title">{{ title }}</h1>
+
+  <div class="slideshow">
+    <button class="slide-arrow" id="prev" aria-label="Previous">‹</button>
+    <div class="slide-stage" id="stage" title="Click to advance">
+      <img id="slide-img" src="{{ slides[0] }}" alt="">
+    </div>
+    <button class="slide-arrow" id="next" aria-label="Next">›</button>
+  </div>
+  <div class="slide-counter"><span id="cur">1</span> / <span id="total">{{ slides.length }}</span></div>
+
+  <div class="statement">
+    {{ content | safe }}
+  </div>
+
+</main>
+
+<script type="application/json" id="slides-data">{{ slides | jsonStringify | safe }}</script>

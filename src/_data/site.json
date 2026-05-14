@@ -1,0 +1,12 @@
+{
+  "name": "Jiatong Lu",
+  "name_zh": "吕佳桐",
+  "email": "jiatonglu1988@gmail.com",
+  "instagram": "https://www.instagram.com/jiatonglu_/",
+  "menu": [
+    { "label": "Project", "url": "/project/" },
+    { "label": "Exhibition & Publication", "url": "/exhibition/" },
+    { "label": "Editorial", "url": "/editorial/" }
+  ],
+  "homepage_cover": "/images/cover.jpg"
+}
