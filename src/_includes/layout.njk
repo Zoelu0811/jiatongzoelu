@@ -50,6 +50,20 @@
 </style>
 </head>
 <body>
+<!-- Netlify Identity widget — needed to catch invite/recovery links and show admin login on any page -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
 <div class="site">
 
   <header class="header">
