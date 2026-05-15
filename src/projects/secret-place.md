@@ -1,16 +1,16 @@
 ---
-layout: project-slideshow.njk
 title: The Secret Place With Nowhere To Hide
 order: 3
-cover: /images/secret-place.jpg
+cover: /images/the-secret-place-with-nowhere-to-hide-1.jpg
+layout: project-slideshow.njk
 slides:
-  - /images/secret-place/Scan-133.jpg
-  - /images/secret-place/_DSC6162.jpg
-  - /images/secret-place/Scan-40a.jpg
-  - /images/secret-place/Scan-18.jpg
-  - /images/secret-place/Untitled-2.jpg
-  - /images/secret-place/_DSC6223.jpg
-  - /images/secret-place/Scan-28a.jpg
+  - /images/the-secret-place-with-nowhere-to-hide-1.jpg
+  - /images/the-secret-place-with-nowhere-to-hide-2.jpg
+  - /images/the-secret-place-with-nowhere-to-hide-4.jpg
+  - /images/the-secret-place-with-nowhere-to-hide-6.jpg
+  - /images/the-secret-place-with-nowhere-to-hide-7.jpg
+  - /images/the-secret-place-with-nowhere-to-hide-8.jpg
+  - /images/the-secret-place-with-nowhere-to-hide-10.jpg
 ---
 <p>As a child, when I was beaten and scolded severely by my family at home, a place I could not escape from, I would instinctively dissociate myself from that combat situation. I would imagine myself in another shadowy space far away, where I could float or sink without gravity. My body would become numb instantaneously and I could not feel any pain. Whenever I was overwhelmed with emotions of helplessness or alienation, I would fantasize about escaping to an unknown place, a forest or an island, where no one knows me, and I do not exist for any purpose. That process would bring me calm and peace temporarily.</p>
 
