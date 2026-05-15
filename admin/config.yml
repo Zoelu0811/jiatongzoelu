@@ -125,15 +125,31 @@ collections:
         name: "about"
         fields:
           - { name: bio, label: "Bio (separate paragraphs with a blank line)", widget: text }
-          - name: education
-            label: "Education"
+          - name: awards_grants
+            label: "Awards & Grants"
             widget: list
+            summary: "{{fields.year}} — {{fields.detail}}"
             fields:
               - { name: year, label: "Year", widget: string }
               - { name: detail, label: "Detail", widget: string }
-          - name: awards
-            label: "Selected Awards"
+          - name: solo_exhibitions
+            label: "Solo Exhibitions"
             widget: list
+            summary: "{{fields.year}} — {{fields.detail}}"
+            fields:
+              - { name: year, label: "Year", widget: string }
+              - { name: detail, label: "Detail", widget: string }
+          - name: selected_exhibitions
+            label: "Selected Exhibitions"
+            widget: list
+            summary: "{{fields.year}} — {{fields.detail}}"
+            fields:
+              - { name: year, label: "Year", widget: string }
+              - { name: detail, label: "Detail", widget: string }
+          - name: publications
+            label: "Publications"
+            widget: list
+            summary: "{{fields.year}} — {{fields.detail}}"
             fields:
               - { name: year, label: "Year", widget: string }
               - { name: detail, label: "Detail", widget: string }
