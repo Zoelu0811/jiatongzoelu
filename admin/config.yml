@@ -120,10 +120,9 @@ collections:
   - name: "about"
     label: "About"
     files:
-      - file: "src/about.njk"
+      - file: "src/_data/about.json"
         label: "About page"
         name: "about"
-        format: yaml-frontmatter
         fields:
           - { name: bio, label: "Bio (separate paragraphs with a blank line)", widget: text }
           - name: awards_grants
