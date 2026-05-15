@@ -1,9 +1,9 @@
 ---
-layout: project-scrollytelling.njk
 title: Nowhere Land
-year: "2022 — Ongoing"
+year: 2022 — Ongoing
 order: 1
-cover: /images/nowhere-land.jpg
+cover: /images/ecological-field-study.jpg
+layout: project-scrollytelling.njk
 images:
   - /images/nowhere-land/_DSF8193-Edit-copy.jpg
   - /images/nowhere-land/Nowhere-Land_Shivani.jpg
