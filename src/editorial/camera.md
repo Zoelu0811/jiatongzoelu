@@ -1,11 +1,19 @@
 ---
-title: Camera Portrait
-order: 4
-cover: /images/editorial/camera-portrait.jpg
-label: "[Client / Publication]"
+title: Michael Halsband
+order: 3
+cover: /images/_w7b0318-edit.jpg
+label: Michael Halsband
 groups:
-  - title: "[Camera portrait — title]"
-    description: "[Short description of this assignment.]"
+  - title: Michael Halsband
+    description: Vivo Campaign
     images:
-      - /images/editorial/camera/cam-1.jpg
+      - /images/_w7b0318-edit.jpg
+      - /images/_w7b0516-edit.jpg
+      - /images/_w7b0591-edit.jpg
+      - /images/_w7b0409-edit.jpg
+      - /images/_w7b0582-edit.jpg
+      - /images/_w7b0906-edit.jpg
+      - /images/_w7b0592-edit.jpg
+      - /images/_w7b0551-edit.jpg
+      - /images/_w7b0358-edit.jpg
 ---
