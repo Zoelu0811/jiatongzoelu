@@ -15,6 +15,8 @@ images:
   - /images/kimberly-longmont-colorado.jpg
   - /images/lyme-body.jpg
   - /images/site-of-joseph’s-passing-due-to-lyme-carditis-poughkeepsie-new-york.jpg
+  - /images/buck-poughkeepsie-new-york.jpg
+  - /images/julia’s-medications-over-ten-years-acra-new-york.jpg
   - /images/_dsf8642-edit-copy-edit-3.jpg
 ---
 <p>Nowhere Land is an ongoing research-based project examining systemic failures in healthcare systems when faced with medical uncertainty and marginalized patients. Centered on the chronic Lyme disease community in the United States — while recognizing Lyme disease as a growing global public health concern, particularly in the context of climate change — the project uses this condition as a lens to examine recurring institutional dynamics: denial in the face of uncertainty, the protection of medical authority, and the stigmatization of patients whose symptoms fall outside established diagnostic frameworks.</p>
