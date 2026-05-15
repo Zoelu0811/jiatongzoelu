@@ -1,20 +1,17 @@
 ---
-title: Keith
+title: Portraits for Artists
 order: 1
 cover: /images/editorial/keith.jpg
-label: "[Client / Publication — Keith]"
+label: Portraits for Artists
 groups:
-  - title: "[Keith — title]"
-    description: "[Short description of this assignment — who, what, where, the magazine/client, any notes.]"
+  - title: Keith bendis
+    description: Cartoonist and Illustrator
     images:
-      - /images/editorial/keith/keith-1.jpg
-      - /images/editorial/keith/keith-2.jpg
-      - /images/editorial/keith/keith-3.jpg
-      - /images/editorial/keith/keith-4.jpg
-      - /images/editorial/keith/keith-5.jpg
+      - /images/keith8.jpg
+      - /images/keith10.jpg
+      - /images/keith2.jpg
+      - /images/keith6.jpg
   - title: "[Second artist — title]"
     description: "[Short description of this assignment.]"
-    images:
-      - /images/editorial/portrait-2/p2-1.jpg
-      - /images/editorial/portrait-2/p2-2.jpg
+    images: []
 ---
