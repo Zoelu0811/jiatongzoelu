@@ -123,6 +123,7 @@ collections:
       - file: "src/_data/about.json"
         label: "About page"
         name: "about"
+        format: json
         fields:
           - { name: bio, label: "Bio (separate paragraphs with a blank line)", widget: text }
           - name: awards_grants
