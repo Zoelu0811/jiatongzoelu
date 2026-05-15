@@ -4,18 +4,9 @@
   "email": "jiatonglu1988@gmail.com",
   "instagram": "https://www.instagram.com/jiatonglu_/",
   "menu": [
-    {
-      "label": "Project",
-      "url": "/project/"
-    },
-    {
-      "label": "Exhibition & Publication",
-      "url": "/exhibition/"
-    },
-    {
-      "label": "Editorial",
-      "url": "/editorial/"
-    }
+    { "label": "Projects", "url": "/project/" },
+    { "label": "Exhibitions & Publications", "url": "/exhibition/" },
+    { "label": "Editorial", "url": "/editorial/" }
   ],
   "homepage_cover": "/images/new-cover.jpg"
 }
