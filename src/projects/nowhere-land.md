@@ -27,8 +27,8 @@ images:
 
 <p>Rather than focusing solely on Lyme disease as a medical condition, the project asks: how does a healthcare system respond to what it cannot fully understand? A tiny organism — the tick — exposes a broader vulnerability in how we respond to health crises. Nowhere Land ultimately examines how medical, social, environmental, and institutional forces shape structural and personal vulnerability, while considering how art, and photography in particular, can make complex experiences visible and emotionally accessible.</p>
 
-<p>*Photographs featured in Ecological Field Study were made at the Cary Institute of Ecosystem Studies research field in Millbrook, New York, with the assistance of Dr. Richard S. Ostfeld and his research team.*</p>
+*Photographs featured in Ecological Field Study were made at the Cary Institute of Ecosystem Studies research field in Millbrook, New York, with the assistance of Dr. Richard S. Ostfeld and his research team.*
 
-<p>*Archival materials sourced from the Lyme Public Library and the Yale Historical Medical Library.*</p>
+*Archival materials sourced from the Lyme Public Library and the Yale Historical Medical Library.*
 
-<p>*Additional personal medical documents, journals, and related materials provided by Lyme disease patients.*</p>
+*Additional personal medical documents, journals, and related materials provided by Lyme disease patients.*
