@@ -123,6 +123,7 @@ collections:
       - file: "src/about.njk"
         label: "About page"
         name: "about"
+        format: yaml-frontmatter
         fields:
           - { name: bio, label: "Bio (separate paragraphs with a blank line)", widget: text }
           - name: awards_grants
