@@ -1,7 +1,7 @@
 ---
 title: The Lost Bond
 order: 2
-cover: /images/i-the-missing-memory-4.jpg
+cover: /images/lost-bond.jpg
 layout: project-slideshow.njk
 slides:
   - /images/i-the-missing-memory-1.jpg
