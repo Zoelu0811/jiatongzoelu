@@ -1,4 +1,9 @@
+const yaml = require("js-yaml");
+
 module.exports = function(eleventyConfig) {
+  // support .yml / .yaml data files
+  eleventyConfig.addDataExtension("yml,yaml", (contents) => yaml.load(contents));
+
   // copy images directly to output
   eleventyConfig.addPassthroughCopy({ "images": "images" });
   eleventyConfig.addPassthroughCopy("admin");

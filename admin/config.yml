@@ -120,10 +120,10 @@ collections:
   - name: "about"
     label: "About"
     files:
-      - file: "src/_data/about.json"
+      - file: "src/_data/about.yml"
         label: "About page"
         name: "about"
-        format: json
+        format: yml
         fields:
           - { name: bio, label: "Bio (separate paragraphs with a blank line)", widget: text }
           - name: awards_grants
