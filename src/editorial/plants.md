@@ -1,8 +1,8 @@
 ---
 title: "Plantkween "
-order: 2
+order: 5
 cover: /images/untitled4.jpg
-label: JNBY Spring Campaign
+label: Plantkween for JNBY Spring Campaign
 groups:
   - title: "Plantkween "
     description: JNBY Spring Campaign
