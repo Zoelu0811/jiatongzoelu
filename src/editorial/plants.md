@@ -1,11 +1,14 @@
 ---
-title: Plants
+title: "Plantkween "
 order: 2
-cover: /images/editorial/plants.jpg
-label: "[Client / Publication]"
+cover: /images/untitled4.jpg
+label: JNBY Spring Campaign
 groups:
-  - title: "[Plants — title]"
-    description: "[Short description of this assignment.]"
+  - title: "Plantkween "
+    description: JNBY Spring Campaign
     images:
-      - /images/editorial/plants/p-1.jpg
+      - /images/untitled4.jpg
+      - /images/untitled1.jpg
+      - /images/untitled2.jpg
+      - /images/untitled.jpg
 ---
