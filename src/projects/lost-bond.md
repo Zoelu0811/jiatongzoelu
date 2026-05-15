@@ -1,15 +1,13 @@
 ---
-layout: project-slideshow.njk
 title: The Lost Bond
 order: 2
 cover: /images/lost-bond.jpg
+layout: project-slideshow.njk
 slides:
   - /images/lost-bond/IThe-missing-memoryI.jpg
   - /images/lost-bond/IThe-missing-memoryIII.jpg
-  - /images/lost-bond/IThe-missing-memoryIV.jpg
   - /images/lost-bond/_W7B0187.jpg
   - /images/lost-bond/IIRetelling-history--video-installation-image-.jpg
-  - /images/lost-bond/IIINo-dialogue-I.jpg
   - /images/lost-bond/IIINo-dialogue.jpg
 ---
 <p>I focus on the relationship between my mother and me, exploring the complicated and contradictory emotional connection that we have shared, from birth till now. My work began with the first letter my mother wrote to me, in which she mentioned that she was helpless and unwillingly sent me away after I was born, and the situation was closely related to the historical problems associated with Chinese social background. I interviewed people of similar age with similar situations realizing that the basic conflict between my mother and me, in fact, can be seen as a microcosm of the conflicts between Chinese parents from the 1950s and their children from the 1980s. By comparing different relationships between my mother's and my own experiences of growing up, I finally understood that when I immerse myself in the grief over the fact that my mother never sees the real me, I now realize that I never see the real her exactly.</p>
