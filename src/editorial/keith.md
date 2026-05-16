@@ -30,8 +30,8 @@ groups:
       - /images/untitled2.jpg
       - /images/untitled.jpg
   - images:
-      - /images/aj.jpg
       - /images/untitled37.jpg
-    title: AJ & Liv
+      - /images/aj.jpg
+    title: Liv & AJ
     description: Model
 ---
