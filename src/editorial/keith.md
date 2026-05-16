@@ -1,5 +1,5 @@
 ---
-title: Portraits for Artists
+title: Portraits
 order: 2
 cover: /images/_dsf1826-copy.jpg
 label: Portraits for Artists
