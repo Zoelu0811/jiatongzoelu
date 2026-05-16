@@ -18,12 +18,6 @@
       ]
     },
     {
-      "caption_html": "<em>Long Dismissed, Chronic Lyme Disease Is Finally Getting Its Moment</em>, Time Magazine. <a href=\"https://time.com/6974403/chronic-lyme-disease-research/\" target=\"_blank\" rel=\"noopener\">Read →</a>",
-      "images": [
-        "/images/exhibition/time-magazine.jpg"
-      ]
-    },
-    {
       "caption_html": "<em>Nowhere Land</em>, featured in Chinese Photography Magazine, ISSUE 2026.02",
       "images": [
         "/images/f.jpg",
@@ -33,17 +27,23 @@
       ]
     },
     {
-      "caption_html": "<em>Nowhere Land</em>, interviewed by Chinese Photographers Magazine, ISSUE 2024.05.",
+      "caption_html": "<em>Long Dismissed, Chronic Lyme Disease Is Finally Getting Its Moment</em>, Time Magazine. <a href=\"https://time.com/6974403/chronic-lyme-disease-research/\" target=\"_blank\" rel=\"noopener\">Read →</a>",
       "images": [
-        "/images/exhibition/cphoto-1.jpg",
-        "/images/exhibition/cphoto-2.jpg",
-        "/images/exhibition/cphoto-3.jpg"
+        "/images/exhibition/time-magazine.jpg"
       ]
     },
     {
       "caption_html": "<em>The Secret Place with Nowhere to Hide</em>, interviewed by LensCulture. <a href=\"https://www.lensculture.com/articles/jiatong-lu-the-secret-place-with-nowhere-to-hide\" target=\"_blank\" rel=\"noopener\">Read →</a>",
       "images": [
         "/images/exhibition/lensculture.png"
+      ]
+    },
+    {
+      "caption_html": "<em>Nowhere Land</em>, interviewed by Chinese Photographers Magazine, ISSUE 2024.05.",
+      "images": [
+        "/images/exhibition/cphoto-1.jpg",
+        "/images/exhibition/cphoto-2.jpg",
+        "/images/exhibition/cphoto-3.jpg"
       ]
     }
   ]
