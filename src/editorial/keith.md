@@ -17,26 +17,18 @@ groups:
     description: Furniture Maker and Designer
     images:
       - /images/scan-21.jpg
-  - title: Keith Bendis
-    description: Cartoonist and Illustrator
-    images:
-      - /images/keith8.jpg
-      - /images/keith10.jpg
-      - /images/keith2.jpg
-      - /images/keith6.jpg
   - title: Aly Barohn
     description: "Fiber Artist "
     images:
       - /images/untitled45.jpg
       - /images/untitled46.jpg
-  - images:
-      - /images/betzie20.jpg
-      - /images/betzie24.jpg
-      - /images/betzie26.jpg
-      - /images/betzie19.jpg
-      - /images/betzie18-copy.jpg
-    title: Betzie Bendis
-    description: Artist and Garden Designer
+  - title: Plant Kween
+    description: "Author of YOU GROW, GURL! "
+    images:
+      - /images/untitled4.jpg
+      - /images/untitled1.jpg
+      - /images/untitled2.jpg
+      - /images/untitled.jpg
   - images:
       - /images/aj.jpg
       - /images/untitled37.jpg
