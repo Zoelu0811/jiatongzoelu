@@ -46,8 +46,6 @@ groups:
       - /images/_dsf6788.jpg
       - /images/_dsf6683.jpg
       - /images/_dsf6804.jpg
-      - /images/_dsf6701.jpg
-      - /images/_dsf6775.jpg
       - /images/_dsf6792.jpg
       - /images/_dsf6764.jpg
 ---
