@@ -24,18 +24,12 @@
       ]
     },
     {
-      "caption_html": "<em>Nowhere Land</em>, featured in Chinese Photography Magazine, ISSUE 2026.02.",
+      "caption_html": "<em>Nowhere Land</em>, featured in Chinese Photography Magazine, ISSUE 2026.02",
       "images": [
-        "/images/a.jpg",
-        "/images/b.jpg",
-        "/images/c.jpg",
-        "/images/d.jpg"
-      ]
-    },
-    {
-      "caption_html": "<em>The Secret Place with Nowhere to Hide</em>, interviewed by LensCulture. <a href=\"https://www.lensculture.com/articles/jiatong-lu-the-secret-place-with-nowhere-to-hide\" target=\"_blank\" rel=\"noopener\">Read →</a>",
-      "images": [
-        "/images/exhibition/lensculture.png"
+        "/images/f.jpg",
+        "/images/f1.jpg",
+        "/images/f3.jpg",
+        "/images/f2.jpg"
       ]
     },
     {
@@ -44,6 +38,12 @@
         "/images/exhibition/cphoto-1.jpg",
         "/images/exhibition/cphoto-2.jpg",
         "/images/exhibition/cphoto-3.jpg"
+      ]
+    },
+    {
+      "caption_html": "<em>The Secret Place with Nowhere to Hide</em>, interviewed by LensCulture. <a href=\"https://www.lensculture.com/articles/jiatong-lu-the-secret-place-with-nowhere-to-hide\" target=\"_blank\" rel=\"noopener\">Read →</a>",
+      "images": [
+        "/images/exhibition/lensculture.png"
       ]
     }
   ]
