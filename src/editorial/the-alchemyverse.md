@@ -9,9 +9,9 @@ groups:
       - /images/_dsf3259-edit.jpg
       - /images/_dsf2925-edit.jpg
       - /images/_dsf2940-edit.jpg
-      - /images/_dsf3056-edit.jpg
+      - /images/_dsf3164-edit-2.jpg
       - /images/_dsf2927-edit.jpg
       - /images/_dsf2957-edit.jpg
       - /images/_dsf3108-edit.jpg
-      - /images/_dsf3164-edit-2.jpg
+      - /images/_dsf3056-edit.jpg
 ---
