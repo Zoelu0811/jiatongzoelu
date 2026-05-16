@@ -2,7 +2,7 @@
 title: Portraits
 order: 2
 cover: /images/_dsf1826-copy.jpg
-label: Portraits for Artists
+label: Portraits
 groups:
   - title: Laura Chávez Silverman
     description: Writer and Nature Evangelist
