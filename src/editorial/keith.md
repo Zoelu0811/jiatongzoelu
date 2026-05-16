@@ -17,17 +17,29 @@ groups:
     description: Furniture Maker and Designer
     images:
       - /images/scan-21.jpg
+  - title: Keith Bendis
+    description: Cartoonist and Illustrator
+    images:
+      - /images/keith8.jpg
+      - /images/keith10.jpg
+      - /images/keith2.jpg
+      - /images/keith6.jpg
   - title: Aly Barohn
     description: "Fiber Artist "
     images:
       - /images/untitled45.jpg
       - /images/untitled46.jpg
   - images:
-      - /images/aj.jpg
-    title: AJ
-    description: Musician
+      - /images/betzie20.jpg
+      - /images/betzie24.jpg
+      - /images/betzie26.jpg
+      - /images/betzie19.jpg
+      - /images/betzie18-copy.jpg
+    title: Betzie Bendis
+    description: Artist and Garden Designer
   - images:
+      - /images/aj.jpg
       - /images/untitled37.jpg
-    title: Liv
+    title: AJ & Liv
     description: Model
 ---
