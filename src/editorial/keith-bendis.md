@@ -1,7 +1,7 @@
 ---
 title: Keith bendis
 order: 66
-cover: /images/keith8.jpg
+cover: /images/keith6.jpg
 label: Keith Bendis
 groups:
   - title: Keith Bendis
