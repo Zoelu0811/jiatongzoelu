@@ -19,12 +19,11 @@
       "caption_html": "The 46th PhotoRegional Exhibition, Opalka Gallery, Albany, New York.",
       "images": [
         "/images/_dsf8439.jpg",
-        "/images/_dsf8422.jpg",
-        "/images/_dsf8426.jpg"
+        "/images/gg.jpg"
       ]
     },
     {
-      "caption_html": "<em>Nowhere Land</em>, featured in Chinese Photography Magazine, ISSUE 2026.02",
+      "caption_html": "<em>Nowhere Land</em>, featured in Chinese Photography Magazine",
       "images": [
         "/images/f.jpg",
         "/images/f1.jpg",
@@ -39,11 +38,11 @@
       ]
     },
     {
-      "caption_html": "<em>Nowhere Land</em>, interviewed by Chinese Photographers Magazine, ISSUE 2024.05.",
+      "caption_html": "<em>Nowhere Land</em>, interviewed by Chinese Photographers Magazine",
       "images": [
-        "/images/exhibition/cphoto-1.jpg",
-        "/images/exhibition/cphoto-2.jpg",
-        "/images/exhibition/cphoto-3.jpg"
+        "/images/a1.jpg",
+        "/images/a2.jpg",
+        "/images/a3.jpg"
       ]
     }
   ]
