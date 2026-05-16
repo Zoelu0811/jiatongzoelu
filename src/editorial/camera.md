@@ -5,7 +5,7 @@ cover: /images/_w7b0318-edit.jpg
 label: Artists in Their Studios
 groups:
   - title: Michael Halsband
-    description: Vivo Campaign
+    description: ""
     images:
       - /images/_w7b0318-edit.jpg
       - /images/_w7b0516-edit.jpg
