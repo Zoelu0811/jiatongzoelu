@@ -13,6 +13,7 @@ collections:
   # ---------- Site-wide settings ----------
   - name: "site"
     label: "Site Settings"
+    format: "json"
     files:
       - file: "src/_data/site.json"
         label: "Site info, contact, menu"
@@ -99,6 +100,7 @@ collections:
   # ---------- Exhibition & Publication ----------
   - name: "exhibition"
     label: "Exhibition & Publication"
+    format: "json"
     files:
       - file: "src/_data/exhibition.json"
         label: "Exhibition / publication entries"
@@ -119,11 +121,12 @@ collections:
   # ---------- About ----------
   - name: "about"
     label: "About"
+    description: "Edit the Bio, Awards, Exhibitions, and Publications shown on the About page."
+    format: "yml"
     files:
       - file: "src/_data/about.yml"
         label: "About page"
         name: "about"
-        format: yml
         fields:
           - { name: bio, label: "Bio (separate paragraphs with a blank line)", widget: text }
           - name: awards_grants
