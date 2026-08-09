@@ -40,7 +40,7 @@ pageStyles: |
     {% for project in sortedProjects %}
     <article class="project">
       <a href="{{ project.url }}">
-        <img src="{{ project.data.cover }}" alt="">
+        {% responsiveImage project.data.cover, project.data.title, "(max-width: 640px) 100vw, 600px", 960, "lazy" if not loop.first else "eager", "", { fetchpriority: "high" if loop.first else "auto" } %}
         <div class="caption">{{ project.data.title }}{% if project.data.year %} ({{ project.data.year }}){% endif %}</div>
       </a>
     </article>

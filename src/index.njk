@@ -57,7 +57,7 @@ pageStyles: |
   </ul>
 
   <div class="cover">
-    <img src="{{ site.homepage_cover }}" alt="">
+    {% responsiveImage site.homepage_cover, "", "(max-width: 640px) 75vw, 360px", 720, "eager", "", { fetchpriority: "high" } %}
   </div>
 
 </main>

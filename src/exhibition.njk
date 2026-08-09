@@ -71,9 +71,29 @@ pageScripts: |
     if (imgs.length > 1) group.classList.add('multi');
     const stage = group.querySelector('.stage');
     const imgEl = stage.querySelector('img');
+    const webpSource = stage.querySelector('source[type="image/webp"]');
     const cur = group.querySelector('.cur');
     let i = 0;
-    function show(idx) { i = (idx + imgs.length) % imgs.length; imgEl.src = imgs[i]; cur.textContent = i + 1; }
+    function show(idx) {
+      i = (idx + imgs.length) % imgs.length;
+      const img = imgs[i];
+      if (webpSource && img.webpSrcset) {
+        webpSource.srcset = img.webpSrcset;
+        webpSource.sizes = img.sizes || '';
+      } else if (webpSource) {
+        webpSource.removeAttribute('srcset');
+        webpSource.removeAttribute('sizes');
+      }
+      if (img.srcset) {
+        imgEl.srcset = img.srcset;
+        imgEl.sizes = img.sizes || '';
+      } else {
+        imgEl.removeAttribute('srcset');
+        imgEl.removeAttribute('sizes');
+      }
+      imgEl.src = img.src;
+      cur.textContent = i + 1;
+    }
     if (imgs.length > 1) stage.addEventListener('click', () => show(i + 1));
   });
   const gallery = document.querySelector('.gallery');
@@ -94,8 +114,8 @@ pageScripts: |
 <main class="gallery">
 
   {% for entry in exhibition.entries %}
-  <article class="group" data-images='{{ entry.images | jsonStringify | safe }}'>
-    <div class="stage"><img src="{{ entry.images[0] }}" alt=""></div>
+  <article class="group" data-images='{{ entry.images | responsiveImageList(1280, "(max-width: 640px) 100vw, 70vw") | jsonStringify | safe }}'>
+    <div class="stage">{% responsiveImage entry.images[0], "", "(max-width: 640px) 100vw, 70vw", 1280, "lazy" if not loop.first else "eager", "", { fetchpriority: "high" if loop.first else "auto" } %}</div>
     <div class="counter"><span class="cur">1</span> / <span class="tot">{{ entry.images.length }}</span></div>
     <div class="caption">{{ entry.caption_html | safe }}</div>
   </article>

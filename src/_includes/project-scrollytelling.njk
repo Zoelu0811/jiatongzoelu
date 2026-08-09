@@ -71,7 +71,7 @@ pageScripts: |
 <main class="gallery">
 
   {% for img in images %}
-  <img src="{{ img }}" alt="">
+  {% responsiveImage img, title, "(max-width: 640px) 100vw, 70vw", 1280, "lazy" if not loop.first else "eager", "", { fetchpriority: "high" if loop.first else "auto" } %}
   {% endfor %}
 
   <div class="text-panel">

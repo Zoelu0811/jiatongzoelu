@@ -43,7 +43,7 @@ pageStyles: |
   {% set sortedEditorial = collections.editorial | sort(false, false, "data.order") %}
   {% for item in sortedEditorial %}
   <a href="{{ item.url }}" class="item">
-    <div class="thumb"><img src="{{ item.data.cover }}" alt=""></div>
+    <div class="thumb">{% responsiveImage item.data.cover, item.data.label, "(max-width: 640px) 50vw, 360px", 720, "lazy" if not loop.first else "eager", "", { fetchpriority: "high" if loop.first else "auto" } %}</div>
     <div class="label">{{ item.data.label }}</div>
   </a>
   {% endfor %}

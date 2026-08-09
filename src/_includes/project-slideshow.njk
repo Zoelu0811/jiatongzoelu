@@ -65,11 +65,29 @@ pageScripts: |
   const prev = document.getElementById('prev');
   const next = document.getElementById('next');
   const stage = document.getElementById('stage');
+  const webpSource = stage.querySelector('source[type="image/webp"]');
   let i = 0;
+  function applySlide(slide) {
+    if (webpSource && slide.webpSrcset) {
+      webpSource.srcset = slide.webpSrcset;
+      webpSource.sizes = slide.sizes || '';
+    } else if (webpSource) {
+      webpSource.removeAttribute('srcset');
+      webpSource.removeAttribute('sizes');
+    }
+    if (slide.srcset) {
+      img.srcset = slide.srcset;
+      img.sizes = slide.sizes || '';
+    } else {
+      img.removeAttribute('srcset');
+      img.removeAttribute('sizes');
+    }
+    img.src = slide.src;
+  }
   total.textContent = slides.length;
   function show(idx) {
     i = (idx + slides.length) % slides.length;
-    img.src = slides[i];
+    applySlide(slides[i]);
     cur.textContent = i + 1;
   }
   prev.addEventListener('click', () => show(i - 1));
@@ -80,11 +98,20 @@ pageScripts: |
     if (e.key === 'ArrowRight') show(i + 1);
   });
   function preload() {
+    const slide = slides[(i + 1) % slides.length];
     const nx = new Image();
-    nx.src = slides[(i + 1) % slides.length];
+    if (slide.webpSrcset) {
+      nx.srcset = slide.webpSrcset;
+      nx.sizes = slide.sizes || '';
+    } else if (slide.srcset) {
+      nx.srcset = slide.srcset;
+      nx.sizes = slide.sizes || '';
+    }
+    nx.src = slide.src;
   }
   img.addEventListener('load', preload);
 ---
+{% set slideImages = slides | responsiveImageList(1280, "(max-width: 640px) 78vw, 70vw") %}
 <main class="project-body">
 
   <h1 class="project-title">{{ title }}</h1>
@@ -92,7 +119,7 @@ pageScripts: |
   <div class="slideshow">
     <button class="slide-arrow" id="prev" aria-label="Previous">‹</button>
     <div class="slide-stage" id="stage" title="Click to advance">
-      <img id="slide-img" src="{{ slides[0] }}" alt="">
+      {% responsiveImage slides[0], title, "(max-width: 640px) 78vw, 70vw", 1280, "eager", "", { id: "slide-img", fetchpriority: "high" } %}
     </div>
     <button class="slide-arrow" id="next" aria-label="Next">›</button>
   </div>
@@ -104,4 +131,4 @@ pageScripts: |
 
 </main>
 
-<script type="application/json" id="slides-data">{{ slides | jsonStringify | safe }}</script>
+<script type="application/json" id="slides-data">{{ slideImages | jsonStringify | safe }}</script>
