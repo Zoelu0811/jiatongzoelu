@@ -52,13 +52,24 @@
 </head>
 <body>
 <!-- Netlify Identity widget — needed to catch invite/recovery links and show admin login on any page -->
+<script>
+  (function() {
+    var authHashPattern = /^#(?:invite|confirmation|recovery|email_change)_token=/;
+    if (authHashPattern.test(window.location.hash) && !window.location.pathname.startsWith("/admin/")) {
+      window.location.replace("/admin/" + window.location.hash);
+    }
+  })();
+</script>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
   if (window.netlifyIdentity) {
+    var authHashPattern = /^#(?:invite|confirmation|recovery|email_change)_token=/;
     window.netlifyIdentity.on("init", user => {
       if (!user) {
         window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
+          if (!authHashPattern.test(window.location.hash)) {
+            document.location.href = "/admin/";
+          }
         });
       }
     });
