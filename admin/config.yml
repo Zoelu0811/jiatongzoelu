@@ -93,6 +93,7 @@ collections:
         fields:
           - { name: title, label: "Group title", widget: string }
           - { name: description, label: "Description (optional)", widget: text, required: false }
+          - { name: description_html, label: "Description with link (HTML optional)", widget: text, required: false }
           - name: images
             label: "Photos (first one = group cover)"
             widget: list

@@ -42,6 +42,7 @@ pageStyles: |
   .caption .title { font-weight: 700; margin-bottom: 4px; }
   .caption p { margin-bottom: 8px; }
   .caption p:last-child { margin-bottom: 0; }
+  .caption a { text-decoration: underline; text-underline-offset: 2px; }
   .scroll-hint {
     position: fixed;
     bottom: var(--pad); right: var(--pad);
@@ -119,7 +120,11 @@ pageScripts: |
     <div class="counter"><span class="cur">1</span> / <span class="tot">{{ group.images.length }}</span></div>
     <div class="caption">
       <div class="title">{{ group.title }}</div>
-      {% if group.description %}<p>{{ group.description }}</p>{% endif %}
+      {% if group.description_html %}
+      <p>{{ group.description_html | safe }}</p>
+      {% elif group.description %}
+      <p>{{ group.description }}</p>
+      {% endif %}
     </div>
   </article>
   {% endfor %}
