@@ -19,4 +19,8 @@ groups:
       - /images/vanessa-cassandra-verse-workshop-02.jpg
       - /images/vanessa-cassandra-verse-workshop-03.jpg
       - /images/vanessa-cassandra-verse-workshop-04.jpg
+  - title: KWZT Studio
+    description: Products on view at The Beck
+    images:
+      - /images/kwzt-studio-the-beck-01.jpg
 ---
