@@ -1,6 +1,6 @@
 ---
 title: Makers and Small Business
-order: 3
+order: 4
 cover: /images/scan-21.jpg
 label: Makers and Small Business
 groups:

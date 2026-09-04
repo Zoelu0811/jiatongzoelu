@@ -1,6 +1,6 @@
 ---
 title: Artists in their Studios
-order: 2
+order: 3
 cover: /images/_w7b0318-edit.jpg
 label: Artists in their Studios
 groups:

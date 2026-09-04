@@ -1,6 +1,6 @@
 ---
 title: Documentary
-order: 4
+order: 1
 cover: /images/lyme-body.jpg
 label: Documentary
 groups:
