@@ -1,6 +1,6 @@
 ---
 title: Portraits
-order: 2
+order: 1
 cover: /images/_dsf1826-copy.jpg
 label: Portraits
 groups:

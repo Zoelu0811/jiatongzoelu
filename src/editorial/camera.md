@@ -1,8 +1,8 @@
 ---
-title: Studio Portraits
-order: 3
+title: Artists in their Studios
+order: 2
 cover: /images/_w7b0318-edit.jpg
-label: Artists in Their Studios
+label: Artists in their Studios
 groups:
   - title: Michael Halsband
     description: ""
