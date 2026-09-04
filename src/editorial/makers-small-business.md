@@ -12,4 +12,11 @@ groups:
       - /images/beth-george-bagel-ish-03.jpg
       - /images/beth-george-bagel-ish-04.jpg
       - /images/beth-george-bagel-ish-05.jpg
+  - title: Vanessa Shafer and Cassandra Ruff
+    description: founders of VERSE Work/Shop
+    images:
+      - /images/vanessa-cassandra-verse-workshop-01.jpg
+      - /images/vanessa-cassandra-verse-workshop-02.jpg
+      - /images/vanessa-cassandra-verse-workshop-03.jpg
+      - /images/vanessa-cassandra-verse-workshop-04.jpg
 ---
