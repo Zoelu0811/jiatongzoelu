@@ -1,7 +1,7 @@
 ---
 title: Makers and Small Business
 order: 4
-cover: /images/beth-george-bagel-ish-01.jpg
+cover: /images/beth-george-bagel-ish-04.jpg
 label: Makers and Small Business
 groups:
   - title: Beth V. George
