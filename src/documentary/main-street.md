@@ -1,8 +1,11 @@
 ---
 title: Main Street
 order: 1
-cover: /images/main-street-elliott-01.jpg
+cover: /images/main-street-opening-00.jpg
 blocks:
+  - type: image
+    image: /images/main-street-opening-00.jpg
+    alt: Main Street, Poughkeepsie
   - type: image
     image: /images/main-street-elliott-01.jpg
     alt: Elliott, Main Street
@@ -21,9 +24,6 @@ blocks:
     image: /images/main-street-dollar-general-03.jpg
     alt: Dollar General on Main Street
   - type: image
-    image: /images/main-street-abandoned-building-04.jpg
-    alt: Abandoned building on Main Street
-  - type: image
     image: /images/main-street-sid-05.jpg
     alt: Sid, Main Street
   - type: text
@@ -31,4 +31,7 @@ blocks:
       <p>Sid, 53, was born and raised in Poughkeepsie. He now lives in a local park and collects and sells recyclables to earn money. Photographed in front of an abandoned building.</p>
 
       <blockquote>“This place is full of abandoned buildings. People sleep on the street, no jobs, no money. The mayor just wants to push the homeless out. Nobody cares about people here.”</blockquote>
+  - type: image
+    image: /images/main-street-abandoned-building-04.jpg
+    alt: Abandoned building on Main Street
 ---
