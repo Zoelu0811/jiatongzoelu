@@ -35,9 +35,12 @@ pageStyles: |
   .text-panel p { margin-bottom: 14px; }
   .text-panel p:last-child { margin-bottom: 0; }
   .text-panel blockquote {
-    margin-top: 20px;
+    margin: 0;
     font-style: italic;
-    text-align: center;
+    text-align: left;
+  }
+  .text-panel p + blockquote {
+    margin-top: 20px;
   }
   .scroll-hint {
     position: fixed;
