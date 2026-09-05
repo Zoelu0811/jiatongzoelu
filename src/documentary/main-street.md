@@ -28,4 +28,15 @@ blocks:
       <p>Sid, 53, was born and raised in Poughkeepsie. He now lives in a local park and collects and sells recyclables to earn money. Photographed in front of an abandoned building.</p>
 
       <blockquote>“This place is full of abandoned buildings. People sleep on the street, no jobs, no money. The mayor just wants to push the homeless out. Nobody cares about people here.”</blockquote>
+  - type: image
+    image: /images/main-street-andrew-street-06.jpg
+    alt: Main Street residential block
+  - type: image
+    image: /images/main-street-andrew-07.jpg
+    alt: Andrew, Main Street
+  - type: text
+    text_html: |
+      <p>Andrew, 43, was born in Beacon and has lived in Poughkeepsie since he was two. He works a range of part-time jobs—cooking in fast food restaurants, working in warehouses—anything that helps him get by.</p>
+
+      <blockquote>“This place has always been a shit place,” he says, “but now it’s even worse. When I was a kid, the streets were full of people, kids walking and playing—now there’s nothing. Still, it’s home.”</blockquote>
 ---
