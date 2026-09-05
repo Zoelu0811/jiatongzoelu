@@ -50,4 +50,20 @@ blocks:
   - type: image
     image: /images/main-street-dinayharae-friends-09.jpg
     alt: Dinayharae and friends, Main Street
+  - type: text
+    text_html: |
+      <div class="title">Main Street</div>
+      <div class="meta">2025</div>
+
+      <p>In the summer of 2025, I spent a day on Main Street in Poughkeepsie, just a few minutes from where I live.</p>
+
+      <p>I had wanted to photograph there for a while. Several people I photographed for my Lyme disease project live in this neighborhood, and they told me stories about homelessness, violence, and drug-related problems. They would often tell me to be careful if I was there at night.</p>
+
+      <p>I live in a beautiful area near Vassar College. Yet just a few minutes away, the reality can feel completely different.</p>
+
+      <p>I know this is not unusual in the United States. Most cities have neighborhoods like this. But even after living here for ten years, it is still something I struggle to make sense of.</p>
+
+      <p>During an assignment, I spent a day talking with adults and teenagers in the area. I wasn’t looking for any particular story. I simply wanted to understand who the people living there were, what their lives looked like, and what they thought about the place they lived.</p>
+
+      <p>Most of the stories people shared ultimately pointed toward larger structural issues. In many ways, these issues seemed widely known. What I couldn’t stop wondering was why something so visible could feel so absent from public conversation.</p>
 ---
