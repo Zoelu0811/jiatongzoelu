@@ -1,0 +1,14 @@
+---
+title: Main Street
+order: 1
+cover: /images/main-street-elliott-01.jpg
+blocks:
+  - type: image
+    image: /images/main-street-elliott-01.jpg
+    alt: Elliott, Main Street
+  - type: text
+    text_html: |
+      <p>Elliott, 61, was born and raised in Poughkeepsie. After spending his early years in foster care due to his parents' alcoholism, he became homeless at 15 and slept at the Poughkeepsie train station. He turned to theft for survival and spent over two decades in and out of prison. Since returning to the area in 2010, Elliott has struggled to find steady work due to his criminal record. Today, he makes a living collecting and selling scrap metal, stays out of trouble, and deals with prostate cancer.</p>
+
+      <blockquote>“What I always tell young people is this: go to school, get an education. Education is the key to success in this country. I was just a kid on the street with no one to look up to and no one to learn from.”</blockquote>
+---

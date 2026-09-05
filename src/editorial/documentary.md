@@ -1,13 +1,7 @@
 ---
 title: Documentary
 order: 1
-cover: /images/lyme-body.jpg
+cover: /images/main-street-elliott-01.jpg
 label: Documentary
-groups:
-  - title: Documentary
-    description: ""
-    images:
-      - /images/lyme-body.jpg
-      - /images/kimberly-longmont-colorado.jpg
-      - /images/buck-poughkeepsie-new-york.jpg
+layout: documentary-index.njk
 ---

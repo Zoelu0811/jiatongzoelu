@@ -1,0 +1,48 @@
+---
+layout: layout.njk
+fullScreen: false
+hideFooter: false
+pageStyles: |
+  .projects {
+    flex: 1;
+    max-width: 700px;
+    margin: 64px auto 0;
+    width: 100%;
+    display: flex; flex-direction: column;
+    align-items: center;
+    gap: 96px;
+    padding: 64px 0;
+  }
+  .project {
+    text-align: center;
+    width: 600px; max-width: 100%;
+  }
+  .project img { display: block; width: 100%; height: auto; }
+  .project .caption { margin-top: 16px; font-size: 14px; line-height: 1.9; }
+  .project a:hover img { opacity: 0.85; }
+  body { font-size: 14px; line-height: 1.9; }
+  .logo, .header-meta { font-size: 14px; line-height: 1.9; }
+  @media (max-width: 640px) {
+    .projects { margin-top: 32px; padding: 32px 0; gap: 56px; max-width: 100%; }
+    .project { width: 100%; }
+    .project .caption { font-size: 12px; line-height: 1.6; margin-top: 10px; }
+    body { font-size: 12px; line-height: 1.6; }
+    .logo, .header-meta { font-size: 12px; line-height: 1.6; }
+    .footer { margin-top: 40px; }
+  }
+---
+<main>
+  <section class="projects">
+
+    {% set sortedProjects = collections.documentaryProjects | sort(false, false, "data.order") %}
+    {% for project in sortedProjects %}
+    <article class="project">
+      <a href="{{ project.url }}">
+        {% responsiveImage project.data.cover, project.data.title, "(max-width: 640px) 100vw, 600px", 960, "lazy" if not loop.first else "eager", "", { fetchpriority: "high" if loop.first else "auto" } %}
+        <div class="caption">{{ project.data.title }}{% if project.data.year %} ({{ project.data.year }}){% endif %}</div>
+      </a>
+    </article>
+    {% endfor %}
+
+  </section>
+</main>

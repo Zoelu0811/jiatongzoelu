@@ -83,12 +83,14 @@ collections:
     fields:
       - { name: title, label: "Internal title (becomes URL)", widget: string }
       - { name: order, label: "Display order on Editorial grid", widget: number, default: 99 }
+      - { name: layout, label: "Layout template", widget: hidden, default: "editorial-item.njk", required: false }
       - { name: cover, label: "Cover thumbnail (4:5 ratio looks best)", widget: image }
       - { name: label, label: "Label shown under thumbnail (e.g. 'Time Magazine — Lyme')", widget: string }
       - name: groups
         label: "Subject groups (each with title + photos)"
         label_singular: "Group"
         widget: list
+        required: false
         summary: "{{fields.title}}"
         fields:
           - { name: title, label: "Group title", widget: string }
@@ -97,6 +99,41 @@ collections:
             label: "Photos (first one = group cover)"
             widget: list
             field: { name: image, label: Image, widget: image }
+
+  # ---------- Documentary Projects ----------
+  - name: "documentary_projects"
+    label: "Documentary Projects"
+    label_singular: "Documentary Project"
+    folder: "src/documentary"
+    create: true
+    delete: true
+    extension: "md"
+    format: "yaml-frontmatter"
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: ["order", "title"]
+    fields:
+      - { name: title, label: "Title", widget: string }
+      - { name: year, label: "Year (optional)", widget: string, required: false }
+      - { name: order, label: "Display order", widget: number, default: 99 }
+      - { name: cover, label: "Cover image", widget: image }
+      - name: blocks
+        label: "Photo / text blocks"
+        label_singular: "Block"
+        widget: list
+        summary: "{{fields.type}}"
+        types:
+          - label: "Photo"
+            name: "image"
+            widget: object
+            fields:
+              - { name: image, label: "Photo", widget: image }
+              - { name: alt, label: "Alt text", widget: string, required: false }
+          - label: "Text"
+            name: "text"
+            widget: object
+            fields:
+              - { name: text_html, label: "Text (HTML allowed)", widget: text }
 
   # ---------- Exhibition & Publication ----------
   - name: "exhibition"
