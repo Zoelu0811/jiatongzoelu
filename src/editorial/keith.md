@@ -1,7 +1,7 @@
 ---
 title: Portraits
 order: 3
-cover: /images/untitled4.jpg
+cover: /images/_dsf1826-copy.jpg
 label: Portraits
 groups:
   - title: Laura Chávez Silverman
