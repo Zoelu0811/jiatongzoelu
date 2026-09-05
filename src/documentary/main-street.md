@@ -1,6 +1,6 @@
 ---
 title: Main Street
-order: 1
+order: 2
 cover: /images/main-street-elliott-01.jpg
 blocks:
   - type: image
