@@ -31,17 +31,14 @@ blocks:
     image: /images/documentary-nowhere-land-09.jpg
     alt: Nowhere Land 9
   - type: image
-    image: /images/documentary-nowhere-land-10.jpg
-    alt: Nowhere Land 10
-  - type: image
     image: /images/documentary-nowhere-land-11.jpg
     alt: Nowhere Land 11
   - type: image
+    image: /images/documentary-nowhere-land-10.jpg
+    alt: Nowhere Land 10
+  - type: image
     image: /images/documentary-nowhere-land-12.jpg
     alt: Nowhere Land 12
-  - type: image
-    image: /images/documentary-nowhere-land-13.jpg
-    alt: Nowhere Land 13
   - type: image
     image: /images/documentary-nowhere-land-14.jpg
     alt: Nowhere Land 14
